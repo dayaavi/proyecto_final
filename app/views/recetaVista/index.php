@@ -1,5 +1,5 @@
 <?php defined('BASEPATH') or exit ('No se permite acceso directo');?>
-<h3 class="titulo">RECETAS</h3>
+<h3 style="color: darkslategray;" class="titulo">RECETAS</h3>
 <?php
 
     echo '<div class="flex">';

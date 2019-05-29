@@ -1,5 +1,5 @@
 <?php defined('BASEPATH') or exit ('No se permite acceso directo');?>
-<h3 class="titulo">RECETAS EN DETALLE</h3>
+<h3 class="titulo">RECETAS DETALLE</h3>
 <?php
     echo '<div>';
     foreach ($resultados as $receta) {

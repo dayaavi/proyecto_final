@@ -18,7 +18,7 @@ $(document).ready(function(){
 				success: function(data){
 
 					var divContent = "";
-					divContent+='<div><h3>Resultados de tú Busqueda </h3></div>';
+					divContent+='<div><h3  style="color: darkslategray">Resultados de tú Busqueda </h3></div>';
 					divContent+='<div class="flex">';
 					
 					for(var i = 0; i<data.length; i++)
@@ -38,7 +38,9 @@ $(document).ready(function(){
 					if(data.length>0){
 							$("main").html(divContent)="";
 							// $(".fila_col2").css("display","none");
-					}				
+					}else{
+						$("main").html("<div><h3 class='resultBusq' style='color: darkslategray'><b>Busqueda sin Resultados</b><h3><br></div>");				
+					}			
 				},
 
 				error: function(e){

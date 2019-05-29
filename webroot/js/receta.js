@@ -138,10 +138,9 @@ $(document).ready(function(){
         },
 
         success: function(data){
-          // $("#results").html(data);
           if(data)
 					{
-          $("#results").html("Envio por ajax correctamente!");  
+          $("#results").html("Receta guardada correctamente!");  
 					}
 					else
 					{
