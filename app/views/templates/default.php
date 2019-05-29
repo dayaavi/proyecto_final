@@ -20,6 +20,7 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <link rel="stylesheet" type="text/css" href="webroot/css/modificarPerfil.css">
         <script type="text/javascript" src="webroot/js/modificarPerfil.js"></script>
+        <script type="text/javascript" src="webroot/js/buscar.js"></script>
         </head>
 
     <body>
@@ -30,13 +31,13 @@
                     <h1 id="inicio_h1">La herramienta del Chef</h1>
                     <h3>Estoy para servirte</h3>
                     <!-- Debo indicar la clase y el metodo para buscar -->
-                    <form action="clase/metodo" method="post" id="search" class="form_search">
+                   <!--  <form action="clase/metodo" method="post" id="search" class="form_search"> -->
                     <div class="buscar">
-                        <input type="text" id="search_lime" placeholder="Search.." name="search2">
-                        <button type="submit" id="button_lime"><i class="fa fa-search"></i></button>
-                        <div id="result"></div>                     
+                        <input type="search" id="search_lime" name="search_lime" placeholder="Buscar...">
+                        <!-- <button type="submit" id="button_lime"><i class="fa fa-search"></i></button> -->
+                        <!-- <div id="result"></div>  -->                    
                     </div> 
-                    </form>                       
+                   <!--  </form>        -->                
                 </div> 
             </div>
             <script src="webroot/js/jquery.ripples-min.js"></script>
@@ -52,6 +53,7 @@
         </header>
     
         <main> 
+            <div id="result"></div> 
             <?php echo $content_for_layout;?> 
         </main>
 

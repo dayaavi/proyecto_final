@@ -165,7 +165,7 @@ select * from recetas;
 insert into recetas values (null, 'salmon', 'carne', default, 'daya', 'hola', default,5);
 
 
--- delete  from usuarios where id_user = 3;
+delete  from usuarios where id_user = 4;
 -- consultas
 select * from compras;
 select * from usuarios;
@@ -176,3 +176,16 @@ select * from productos;
 
 
 select * from usuarios WHERE usuario='daya';
+SELECT id_user FROM `usuarios` WHERE usuario='daya';
+SELECT * FROM `recetas` WHERE USUARIOS_id_user = 1;
+
+SELECT * FROM `usuarios` WHERE usuario LIKE concat('%', 'a', '%') AND id_user = 1;  -- No funciona 
+
+SELECT * FROM `usuarios` WHERE usuario LIKE concat('%', 'a', '%') ;
+
+-- SELECT * FROM usuarios JOIN recetas ON usuarios.id_user = recetas.USUARIOS_id_user;
+
+SELECT * FROM usuarios JOIN recetas ON usuarios.id_user=recetas.USUARIOS_id_user WHERE name_receta LIKE concat('%', 'a', '%') OR category LIKE concat('%', 'a', '%');
+SELECT * FROM usuarios JOIN recetas ON 'usuarios.id_user' = 'recetas.USUARIOS_id_user' WHERE name_receta LIKE concat('%', 'a', '%') OR category LIKE concat('%', 'a', '%'); -- ASI NO FUNCIONA
+SELECT * FROM usuarios JOIN recetas ON usuarios.id_user = recetas.USUARIOS_id_user WHERE name_receta LIKE concat('%', 'a', '%') OR category LIKE concat('%', 'a', '%'); -- FUNCIONA PERFECTAMENTE
+
