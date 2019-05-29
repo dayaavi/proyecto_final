@@ -1,0 +1,61 @@
+.flex
+{
+    max-width: 800px;
+	margin: auto;
+	padding: 40px 10px;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	/* justify-content: center;*/
+    /*justify-content: space-around; */
+    justify-content: space-between;
+}
+
+.card{
+	width: 300px;
+	height: 420px;
+	padding: 10px;
+	border-radius: 5px;
+	background-color: rgb(230, 230, 230);
+	cursor: pointer;
+	margin-bottom: 10px;
+	top: 0;
+	left: 0;
+	transition: all .2s;
+    position: relative;
+    box-shadow: 0 2px 2px;
+
+}
+div .input_rect{
+	font-size: 14px !important;
+}
+main{
+	margin-top: 50px;
+}
+a{
+	text-decoration: none;
+    color: black;
+}
+div.card:hover{
+	top: -5px;
+	left: -5px;
+	box-shadow: 2px 2px 2px black;
+}
+
+div.card>div.image_card{
+	height: 52%;
+	background-size: cover;
+	background-position: center;
+}
+
+.bot_card{
+	border-radius: 5px;
+	color: rgba(173, 199, 67);
+	border: 2px solid rgba(173, 199, 67);
+	box-shadow: 0px 0px 10px -2px #112;
+	cursor: pointer;
+}
+
+
+
+

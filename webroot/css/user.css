@@ -1,0 +1,74 @@
+/* *{
+    margin: 0px;
+    padding: 0px;
+    list-style: none;
+    text-decoration: none;
+    font-family: sans-serif;
+    box-sizing: border-box; 
+} */
+form.form_user{
+	width: 30%;
+	margin: 0 auto;
+	padding: 8% 0 8% 0;
+	color: #555;
+}
+.user_registro{
+	width: 100%;
+	height: 35px;
+	padding: 10px;
+	margin: 5px 0 10px 0;
+	color: #555;
+	border: none;
+	background: #eee;
+}
+.psw:focus{
+	background-color: #ddd;
+	outline: none;
+}
+#loginBtn, #registar, #modif_btn{
+	float: left;
+	width: 50%;
+	/* background-color: #4caf50c9; */
+	background-color: rgba(173, 199, 67, 0.8);
+}
+input[type=reset]{
+	float: left;
+	width: 50%;
+	/* background-color: #f44336d4; */
+	background-color: black;
+}
+#loginBtn:hover, input[type=reset]:hover{
+	opacity: 1;
+}
+.btn{
+	color: white;
+	font-family: 'Cousine', monospace;
+	font-size: 14px;
+	padding: 10px 0;
+	margin: 8px 0;
+	border: none;
+	cursor: pointer;
+	opacity: 0.8;
+}
+form p, .user_h3{
+	text-align: center;
+	padding-bottom: 10%;
+}
+#registro{
+	display: none;
+}
+span{
+	cursor: pointer;
+	text-decoration: underline;
+}
+.error-validation{
+	border: 1px solid red !important;
+}
+#errorsR, #errorsL, #errorsM{
+	margin-top: 20px;
+	text-align: center;
+	color: red;
+}
+.clearfix{
+	clear: both;
+}
