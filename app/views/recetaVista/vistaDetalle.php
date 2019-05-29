@@ -4,12 +4,7 @@
     echo '<div>';
     foreach ($resultados as $receta) {
         
-        // href="vista/detalle" debo envairlo a esa vista
-        //<?php 
-        //echo BASE_DIR_URL
-        //
-        //recetaVista/index 
-        echo '<div class="card">';     
+            echo '<div class="card">';     
             echo '<div class="image_card"><div><img src="'. $receta["img_path"] .'" style="width:100%;height:16%;"></div></div>';
             echo '<div class="head">' . '<h3 style="background-color:white; border-radius:3px;">' . 'N°' . $receta["id_recipe"] .' - ' .  'Nombre: ' .$receta["name_receta"] . '</h3></div><br>';
             echo '<div class="input_rect">' . '<b>Categoría: </b>' . $receta["category"] . '</div>';

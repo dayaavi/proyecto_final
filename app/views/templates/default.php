@@ -53,7 +53,7 @@
         </header>
     
         <main> 
-            <div id="result"></div> 
+            <!-- <div id="result"></div>  -->
             <?php echo $content_for_layout;?> 
         </main>
 
