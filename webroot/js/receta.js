@@ -138,14 +138,9 @@ $(document).ready(function(){
         },
 
         success: function(data){
-          if(data)
-					{
-          $("#results").html("Receta guardada correctamente!");  
+          if(data){
+            $("#results").html("Receta guardada correctamente!");  
 					}
-					else
-					{
-					$("#results").html("Error");
-					}	
         },
 
         error: function(){

@@ -26,8 +26,6 @@ $(document).ready(function(){
 						divContent+='<div class="card">';
 							divContent+='<div class="image_card"><div><img src="'+data[i]["img_path"]+'"style="width:100%;height:16%;"></div></div>';
 							divContent+='<div class="head"><h3 style="background-color:white; border-radius:3px;">'+"N°"+data[i]["id_recipe"]+ " - " + " Nombre: " +data[i]["name_receta"]+'</h3></div><br>';
-							
-
 							divContent+='<div class="input_rect">'+"<b>Categoría: </b>"+data[i]["category"]+'</div>';
 							divContent+='<div class="input_rect">'+"<b>Creado por: </b>"+data[i]["creador"]+'</div><br>';
 							divContent+='<div class="input_rect texto">'+"<b>Descripción: </b>"+data[i]["descripcion"]+'</div>';
