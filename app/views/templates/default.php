@@ -33,7 +33,7 @@
                     <!-- Debo indicar la clase y el metodo para buscar -->
                    <!--  <form action="clase/metodo" method="post" id="search" class="form_search"> -->
                     <div class="buscar">
-                        <input type="search" id="search_lime" name="search_lime" placeholder="Buscar...">
+                        <input type="search" id="search_lime" name="search_lime" placeholder="Buscar recetas...">
                         <!-- <button type="submit" id="button_lime"><i class="fa fa-search"></i></button> -->
                         <!-- <div id="result"></div>  -->                    
                     </div> 

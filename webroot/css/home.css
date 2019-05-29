@@ -49,8 +49,9 @@ body{
   font-size: 17px;
   border: none;
   float: left;
-  width: 70%;
-  border-radius: 5px 0 0 5px;
+  width: 90%;
+  border-radius: 5px;
+  /* border-radius: 5px 0 0 5px; */
 }
 #button_lime{
   float: left;
