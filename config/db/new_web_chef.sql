@@ -99,7 +99,7 @@ CREATE TABLE IF NOT EXISTS `new_web_chef`.`productos` (
   `id_productos` INT(11) NOT NULL AUTO_INCREMENT,
   `name_producto` VARCHAR(45) NULL,
   `cant_usada` INT(11) NULL,
-  `und_medida` INT(11) NULL,
+  `und_medida` VARCHAR(10) NULL,
   `cantidad_comprada` INT(11) NULL,
   `und_med_comp` VARCHAR(10) NULL,
   `precio` INT(11) NULL,

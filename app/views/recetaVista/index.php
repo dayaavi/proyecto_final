@@ -13,7 +13,7 @@
             echo '<div class="input_rect">' . '<b>Creado por: </b>' . $receta["creador"] . '</div>';
             echo '<p class="input_rect"><b>Ingredientes: </b></p>'; 
             foreach ($receta["ingredientes"] as $ingrediente) { 
-                echo '<div class="input_rect">' . ' - ' . $ingrediente["name_producto"] . " " . "<b>Cant: </b>" . $ingrediente["cant_usada"] .' ' .$ingrediente["und_med_comp"] . '</div>';
+                echo '<div class="input_rect">' . ' - ' . $ingrediente["name_producto"] . " " . "<b>Cant: </b>" . $ingrediente["cant_usada"] .' ' .$ingrediente["und_medida"] . '</div>';
             }
             
             echo '<div class="input_rect texto">' . '<b>Descripción: </b>' . $receta["descripcion"] . '</div>';
