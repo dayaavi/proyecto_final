@@ -12,14 +12,14 @@ class recetaController extends Controller {
 
         $this->render('index');
     }
-    // Insertar datos a la BD
+ 
     public function form() 
     {
         $usuario = $_SESSION['usuario'];
         // $asd = Security::secure_input($_POST['ingredients']);
         
 
-        if((isset($_POST['fname'])) && (isset($_POST['categoria'])) && (isset($_POST['creado']))  && (isset($_POST['text_form'])))
+        if((isset($_POST['fname'])) && (isset($_POST['categoria'])) && (isset($_POST['creado']))  && (isset($_POST['text_form'])) && (isset($_POST['ingredients'])))
         {
             $fname = Security::secure_input($_POST['fname']);
             $categoria = Security::secure_input($_POST['categoria']);
