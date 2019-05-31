@@ -3,30 +3,32 @@
 <?php
 
     echo '<div class="flex">';
-    $index = 0;
-    foreach ($resultados as $receta) {
-        // echo '<a href="
-        //<?php 
-        // echo BASE_DIR_URL
-        // 
-        // recetaVista/vistaDetalle">';
-
-        // echo '<a>';
+    $count = 0;
+    foreach ($resultados as $receta) {           
+        
         echo '<div class="card">';     
-            echo '<div class="image_card"><div><img src="'. $receta["img_path"] .'" style="width:100%;height:16%;"></div></div>';
-            echo '<div class="head">' . '<h3 style="background-color:white; border-radius:3px;">' . 'N°' . $receta["id_recipe"] .' - ' .  'Nombre: ' .$receta["name_receta"] . '</h3></div><br>';
+            echo '<div class="image_card"><div><img src="'. $receta["img_path"] .'" style="width:90%;"></div></div>';
+            echo '<div class="head">' . '<h3 style="background-color:white; border-radius:3px; width:90%; text-align: center;margin: auto;">' . 'N°' . $receta["id_recipe"] .' - ' .  'Nombre: ' .$receta["name_receta"] . '</h3></div>';
             echo '<div class="input_rect">' . '<b>Categoría: </b>' . $receta["category"] . '</div>';
-            echo '<div class="input_rect">' . '<b>Creado por: </b>' . $receta["creador"] . '</div><br>';
-            echo '<div class="input_rect texto">' . '<b>Descripción: </b>' . $receta["descripcion"]  = utf8_encode(recetaVistaModel::getSubString($receta["descripcion"])) . '</div><br>';
-            echo '<div class="submit_cont">' . '<input type="button" class="bot_card" id="btn_Compartir" value="Compartir">' . '<input type="button" class="bot_card" id="btn_Edita" value="Editar">' . '<input type="button" class="bot_card"id="btn_borrar" value="eliminar" onclick = "funcion_borrar(this)">' . '</div>';
-            echo '<div id="result_borrar"></div>';
-            echo '</div>';
-        // echo '</a>';      
-        $index++;  
+            echo '<div class="input_rect">' . '<b>Creado por: </b>' . $receta["creador"] . '</div>';
+            echo '<p class="input_rect"><b>Ingredientes: </b></p>'; 
+            foreach ($receta["ingredientes"] as $ingrediente) { 
+                echo '<div class="input_rect">' . ' - ' . $ingrediente["name_producto"] . " " . "<b>Cant: </b>" . $ingrediente["cant_usada"] .' ' .$ingrediente["und_med_comp"] . '</div>';
+            }
+            
+            echo '<div class="input_rect texto">' . '<b>Descripción: </b>' . $receta["descripcion"] . '</div>';
+            echo '<div class="input_rect submit_cont">' . '<input type="button" class="bot_card" id="btn_Compartir" value="Compartir">' . '<input type="button" class="bot_card" id="btn_vista" value="Vista" onclick = "funcion_vista(this)">' . '<input type="button" class="bot_card" id="btn_borrar" value="eliminar" onclick = "funcion_borrar(this)">' . '</div>';
+                    
+            
+            // echo '<div id="result_borrar"></div>';
+            echo '</div>';     
+        $count++;  
     }
     echo '</div>';
+    echo '<div id="result_borrar"></div>';
 ?>
-
+<!-- Con el this en la funcion onclick en el boton eliminar me traigo todo el input, 
+al llamar a la funcion indico que al elemento mas cercano de la clase card de la tarjeta lo remueva, es decir lo elimine. -->
 <script>
     function funcion_borrar(e){
         $(e).closest(".card").remove();

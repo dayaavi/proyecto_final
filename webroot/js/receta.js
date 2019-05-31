@@ -17,12 +17,12 @@ function agregar() {
   event.preventDefault();
   divContent = "";
   divContent+='<tr class="selected" id="fila'+cont+'" onclick="seleccionar(this.id)"><td>'+cont+'</td>';
-  divContent+='<td><input class="input_text" type="text" name="nombre_ing'+cont+'" placeholder="Nombre ejemplo: agua..."></td>';
-  divContent+='<td><input class="input_text" type="text" name="cant_usada'+cont+'" placeholder="Cantidad usada..."></td>';
-  divContent+='<td><select class="input_text" id="medida" name="und_med'+cont+'" placeholder="Unidad de medida..."><option value="litros">Litros</option><option value="gramos">gramos</option></select></td>';
-  divContent+='<td><input class="input_text" type="text" name="cant_comp'+cont+'" placeholder="Cantidad comprada..."></td>';
-  divContent+='<td><select class="input_text" id="medida_comp" name="und_medcomp'+cont+'" placeholder="Unidad de medida..."><option value="litros">Litros</option><option value="gramos">gramos</option></select></td>';
-  divContent+=' <td><input class="input_text" type="number" name="precio'+cont+'" placeholder="Precio..."></td></tr>';
+  divContent+='<td><input id="nombre_ing" name="nombre_ing'+cont+'" class="input_text" type="text" placeholder="Nombre ejemplo: agua..."></td>';
+  divContent+='<td><input id="cant_usada" name="cant_usada'+cont+'" class="input_text" type="text" placeholder="Cantidad usada..."></td>';
+  divContent+='<td><select id="und_med" name="und_med'+cont+'" class="input_text" placeholder="Unidad de medida..."><option value="litros">Litros</option><option value="gramos">gramos</option></select></td>';
+  divContent+='<td><input id="cant_comp" name="cant_comp'+cont+'" class="input_text" type="text" placeholder="Cantidad comprada..."></td>';
+  divContent+='<td><select id="und_med_comp" name="und_med_comp'+cont+'" class="input_text" id="medida_comp" placeholder="Unidad de medida..."><option value="litros">Litros</option><option value="gramos">gramos</option></select></td>';
+  divContent+='<td><input id="precio" name="precio'+cont+'" class="input_text" type="number" placeholder="Precio..."></td></tr>';
   
   cont++;
 
@@ -75,30 +75,15 @@ $(document).ready(function(){
     readURL(this);
   });
 
-/* validar antes de enviar a guardar */
   $("#btn_guardar").click(function()
-  { // event.preventDefault();
+  { 
     var msg = "";
     var name = $("#fname").val();
     var categoria = $("#categoria").val(); 
     var creado = $("#creado").val(); 
     var text_form = $("#text_form").val(); 
-    // var imgFile = $('input[type=file]')[0].files[0];
-    var formData = new FormData();
-    /*Aqui se usa es el elemento y no la variable */
-    // if(imgFile == null){
-    //     formData.append('fname', name);
-    //     formData.append('creado', creado);
-    //     formData.append('text_form', text_form);
-    // }else{
-        // formData.append('imgFile', imgFile);
-        formData.append('fname', name);
-        formData.append('categoria', categoria);
-        formData.append('creado', creado);
-        formData.append('text_form', text_form);
-    //}
+    var ingredients = [];
 
-      
     if(name === ""){
       msg += "El campo del nombre está vacío<br>";
       $('#fname').addClass('error-validation');
@@ -111,7 +96,6 @@ $(document).ready(function(){
     }else{
       $('#creado').removeClass('error-validation');
     }
-
     if(text_form === ""){
       msg += "El campo de descripción está vacío";
       $('#text_form').addClass('error-validation');
@@ -120,6 +104,33 @@ $(document).ready(function(){
     }
 
     $("#results").html(msg);
+
+    $.each($('#tabla tr').slice(1), function() {
+      var name = $(this).find("#nombre_ing").val();
+      var cantUsed = $(this).find("#cant_usada").val();
+      var undMed = $(this).find("#und_med").val();
+      var cantComp = $(this).find("#cant_comp").val();
+      var undComp = $(this).find("#und_med_comp").val();
+      var price = $(this).find("#precio").val(); 
+      ingredients.push(
+        {
+          name: name,
+          cantUsed: cantUsed,
+          undMed: undMed,
+          cantComp: cantComp,
+          undComp: undComp,
+          price: price
+        }
+      );   
+   });        
+
+    var ingredientsJson = JSON.stringify(ingredients);
+    var formData = new FormData();
+    formData.append('fname', name);
+    formData.append('categoria', categoria);
+    formData.append('creado', creado);
+    formData.append('text_form', text_form);
+    formData.append('ingredients', ingredientsJson);
 
     // /* Envio de los valores del formulario crear recata a Controller por AJAX*/
 

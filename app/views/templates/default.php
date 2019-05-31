@@ -21,6 +21,7 @@
         <link rel="stylesheet" type="text/css" href="webroot/css/modificarPerfil.css">
         <script type="text/javascript" src="webroot/js/modificarPerfil.js"></script>
         <script type="text/javascript" src="webroot/js/buscar.js"></script>
+        <script type="text/javascript" src="webroot/js/borrar.js"></script>
         </head>
 
     <body>
@@ -33,7 +34,7 @@
                     <!-- Debo indicar la clase y el metodo para buscar -->
                    <!--  <form action="clase/metodo" method="post" id="search" class="form_search"> -->
                     <div class="buscar">
-                        <input type="search" id="search_lime" name="search_lime" placeholder="Buscar recetas...">
+                        <input type="search" id="search_lime" name="search_lime" placeholder="Buscar recetas..." required>
                         <!-- <button type="submit" id="button_lime"><i class="fa fa-search"></i></button> -->
                         <!-- <div id="result"></div>  -->                    
                     </div> 

@@ -29,6 +29,9 @@
 }
 div .input_rect{
 	font-size: 14px !important;
+	text-align: left;
+	padding: 0 0 0 17px;
+	margin-top: 5px;
 }
 main{
 	margin-top: 50px;
@@ -44,7 +47,7 @@ div.card:hover{
 }
 
 div.card>div.image_card{
-	height: 52%;
+	/* height: 52%; */
 	background-size: cover;
 	background-position: center;
 }

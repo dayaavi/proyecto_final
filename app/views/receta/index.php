@@ -61,18 +61,18 @@
                         <th class="right tabla_ing">Precio</th>
                     </tr>
                     <!-- apartir de aquí la tabla será dinamica -->
-                    <tr class="selected" id="fila'+cont+'" onclick="seleccionar(this.id)">
+                    <tr class="selected" id="fila1" onclick="seleccionar(this.id)">
                         <td>
                             <p>1</p>
                         </td>
                         <td>
-                            <input class="input_text" type="text" name="nombre_ing" placeholder="Nombre ejemplo: agua...">
+                            <input id="nombre_ing" name="nombre_ing" class="input_text" type="text" placeholder="Nombre ejemplo: agua...">
                         </td>
                         <td>
-                            <input class="input_text" type="text" name="cant_usada" placeholder="Cantidad usada...">
+                            <input id="cant_usada" name="cant_usada" class="input_text" type="text" placeholder="Cantidad usada...">
                         </td>
                         <td>
-                            <select class="input_text" id="medida" name="und_med" placeholder="Unidad de medida...">
+                            <select id="und_med" name="und_med" class="input_text" placeholder="Unidad de medida...">
                                 <option value="litros">Litros</option>
                                 <option value="gramos">gramos</option>
                                 <option value="tazas">tazas</option>
@@ -82,10 +82,10 @@
                             </select> 
                         </td>
                         <td>
-                            <input class="input_text" type="text" name="cant_comp" placeholder="Cantidad comprada...">
+                            <input id="cant_comp" name="cant_comp" class="input_text" type="text" placeholder="Cantidad comprada...">
                         </td>
                         <td>
-                             <select class="input_text" id="medida" name="und_med" placeholder="Unidad de medida...">
+                             <select id="und_med_comp" name="und_med_comp" class="input_text" placeholder="Unidad de medida...">
                                 <option value="litros">Litros</option>
                                 <option value="gramos">gramos</option>
                                 <option value="tazas">tazas</option>
@@ -95,7 +95,7 @@
                             </select>                             
                         </td>
                         <td>
-                            <input class="input_text" type="number" name="precio" placeholder="Precio...">
+                            <input id="precio" name="precio" class="input_text" type="number" placeholder="Precio...">
                         </td>
                     </tr>
                      <!-- aquí termina  -->

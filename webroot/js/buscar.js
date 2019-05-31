@@ -28,30 +28,29 @@ $(document).ready(function(){
 							divContent+='<div class="head"><h3 style="background-color:white; border-radius:3px;">'+"N°"+data[i]["id_recipe"]+ " - " + " Nombre: " +data[i]["name_receta"]+'</h3></div><br>';
 							divContent+='<div class="input_rect">'+"<b>Categoría: </b>"+data[i]["category"]+'</div>';
 							divContent+='<div class="input_rect">'+"<b>Creado por: </b>"+data[i]["creador"]+'</div><br>';
+							
+							// divContent+='<div class="input_rect">'+' - '+$ingrediente["name_producto"]+" "+"<b>Cant: </b>"+$ingrediente["cant_usada"]+' '+$ingrediente["und_med_comp"]+'</div>';
+							
 							divContent+='<div class="input_rect texto">'+"<b>Descripción: </b>"+data[i]["descripcion"]+'</div>';
+							divContent+='<div class="submit_cont">' + '<input type="button" class="bot_card" id="btn_Compartir" value="Compartir">' + '<input type="button" class="bot_card" id="btn_vista" value="Vista" onclick = "funcion_vista(this)">' + '<input type="button" class="bot_card" id="btn_borrar" value="eliminar" onclick = "funcion_borrar(this)">' + '</div>';
 						divContent+='</div>';
 					}
 					divContent+='<div>';
 
 					if(data.length>0){
-							$("main").html(divContent)="";
-							// $(".fila_col2").css("display","none");
-					}else{
+						$("main").html(divContent)="";
+						// $(".fila_col2").css("display","none");
+					}
+					else{
 						$("main").html("<div><h3 class='resultBusq' style='color: darkslategray'><b>Busqueda sin Resultados</b><h3><br></div>");				
 					}			
 				},
 
-				error: function(e){
-
-				}
+				// error: function(){
+				// 	$("main").html("<div><h3 class='resultBusq' style='color: darkslategray'><b>Busqueda sin Resultados</b><h3><br></div>");	
+				// }
 			});
     	}
 	});
 });
-  
-     
- //            echo '<div class="input_rect">' . '<b>Creado por: </b>' . $receta["creador"] . '</div><br>';
- //            echo '<div class="input_rect texto">' . '<b>Descripción: </b>' . $receta["descripcion"]  = utf8_encode(recetaVistaModel::getSubString($receta["descripcion"])) . '</div><br>';
- //            echo '<div class="submit_cont">' . '<input type="button" class="bot_card" id="btn_Compartir" value="Compartir">' . '<input type="button" class="bot_card" id="btn_Edita" value="Editar">' . '<input type="button" class="bot_card"id="btn_borrar" value="eliminar">' . '</div>';
- //            echo '</div>';
- //        echo '</a>';
+

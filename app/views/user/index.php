@@ -4,10 +4,10 @@
 	<form action="user/registro" method="post" id="registro" class="form_user">
 		
 		<h3 class="user_h3">REGISTRARSE</h3>
-		<input type="text" name="usuarioR" id="usuarioR" class="psw user_registro" placeholder="usuario">
-		<input type="email" name="emailR" id="emailR" class="psw user_registro" placeholder="E-mail">
-		<input type="password" name="contraR" id="contraR" class="psw user_registro" placeholder="contraseña">
-		<input type="password" name="contraRep" id="contraRep" class="psw user_registro" placeholder="Confirmar contraseña">
+		<input type="text" name="usuarioR" id="usuarioR" class="psw user_registro" placeholder="usuario" required>
+		<input type="email" name="emailR" id="emailR" class="psw user_registro" placeholder="E-mail" required>
+		<input type="password" name="contraR" id="contraR" class="psw user_registro" placeholder="contraseña" required>
+		<input type="password" name="contraRep" id="contraRep" class="psw user_registro" placeholder="Confirmar contraseña" required>
 		
 		<div class="clearfix">
 		<input type="button" class="btn" value="Registrar" id="registar">
@@ -27,8 +27,8 @@
 	<form action="user/login" method="post" id="login" class="form_user">
 		
 		<h3 class="user_h3">INICIAR SESIÓN</h3>
-		<input type="text" name="usuarioL" id="usuarioL" class="psw user_registro" placeholder="usuario">
-		<input type="password" name="contraL" id="contraL" class="psw user_registro" placeholder="contraseña">
+		<input type="text" name="usuarioL" id="usuarioL" class="psw user_registro" placeholder="usuario" required>
+		<input type="password" name="contraL" id="contraL" class="psw user_registro" placeholder="contraseña" required>
 		
 		<div class="clearfix">
 		<input type="button" class="btn" value="Entrar" id="loginBtn">

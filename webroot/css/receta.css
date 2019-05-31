@@ -163,9 +163,12 @@ select
   }
   .submit_cont{
     border: 1px solid #ccc;
-    padding: 10px;
-    border-radius: 0 0 5px 5px;
+    /* padding: 10px; */
+    border-radius: 5px;
     margin:  0  2% 2%;
+  }
+  .texto{
+    margin-top: 2px;
   }
 
 

@@ -15,8 +15,8 @@
         <!-- <input type="text" name="usuarioM" id="usuarioM" placeholder="usuario" value="<?php echo $userData['user']; ?>">
         <input type="text" name="contraM" id="contraM" placeholder="contraseña" value="<?php echo $userData['password']; ?>"> -->
 
-        <input class="input_texMod" type="text" name="emailM" id="emailM" placeholder="email">
-        <input class="input_texMod" type="text" name="contraM" id="contraM" placeholder="contraseña">
+        <input class="input_texMod" type="text" name="emailM" id="emailM" placeholder="email" required>
+        <input class="input_texMod" type="text" name="contraM" id="contraM" placeholder="contraseña" required>
         <div class="clearfix">
             <input type="button" class="btn type_btn" value="Modificar" id="modif_btn">
             <input type="reset" class="btn" value="Borrar" id="borrar">
