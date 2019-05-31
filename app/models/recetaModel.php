@@ -18,7 +18,7 @@ class recetaModel extends Model {
 		// Inserto los valores a la tabala recetas identificando el id del usuario
 		$sql_insert = "INSERT INTO recetas (id_recipe, name_receta, category, img_path, creador, descripcion, date_creation, USUARIOS_id_user) 
 		VALUES (null, '$fname', '$categoria', default, '$creado', '$descrip', default, '$id')";
-		$stmt = $connect->query($sql_insert);
+		$stmt = $connect->prepare($sql_insert);
 		$stmt->execute();
 
 		$last_id = $connect->lastInsertId();

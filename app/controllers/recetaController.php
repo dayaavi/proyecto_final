@@ -1,5 +1,5 @@
 <?php defined('BASEPATH') or exit ('No se permite acceso directo');
-
+// Formulario Crear Recetas
 class recetaController extends Controller {
 
     public function index() {
@@ -19,7 +19,7 @@ class recetaController extends Controller {
         // $asd = Security::secure_input($_POST['ingredients']);
         
 
-        if((isset($_POST['fname'])) && (isset($_POST['categoria'])) && (isset($_POST['creado']))  && (isset($_POST['text_form'])) && (isset($_POST['ingredients'])))
+        if((isset($_POST['fname'])) && (isset($_POST['categoria'])) && (isset($_POST['creado']))  && (isset($_POST['text_form'])))
         {
             $fname = Security::secure_input($_POST['fname']);
             $categoria = Security::secure_input($_POST['categoria']);

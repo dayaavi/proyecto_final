@@ -1,7 +1,6 @@
-<?php defined('BASEPATH') or exit ('No se permite acceso directo'); ?>
+<?php defined('BASEPATH') or exit ('No se permite acceso directo'); 
 
-<?php
-
+// Vista de las recets
 class recetaVistaController extends Controller {
 
 	public function index() {
